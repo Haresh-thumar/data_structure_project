@@ -1,0 +1,4 @@
+<input [(ngModel)]="message" (keyup.enter)="sendMessage()">
+<ul>
+    <li *ngFor="let message of thread">{{ message }}</li>
+</ul>
