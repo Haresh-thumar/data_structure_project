@@ -1,0 +1,17 @@
+<div style="margin: 20px 50px 20px 50px;">
+
+    <!------- Single Thread Example ------>
+    <small>Print the 100 Numbers in Single Thread</small><br>
+    <button mat-raised-button color="warn" (click)="find10thPrimeNumber()">Click here</button>
+    <div>The prime number is {{ prime10 }}</div> <br />
+    <hr>
+    <button mat-raised-button color="warn" (click)="find10000thPrimeNumber()">Click Me</button>
+    <div>The 10000<sup>th</sup> prime number is {{ prime10000 }}</div>
+
+    <hr>
+    <!------- Multi Thread Example ------>
+    <h1>Multi-Thread Example</h1>
+    <button mat-raised-button color="warn" (click)="runParallel()">Run Parallel</button>
+    <p>Result: {{ result }}</p>
+
+</div>

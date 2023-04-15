@@ -12,6 +12,8 @@ import { MapComponent } from './map/map.component';
 import { ArrayComponent } from './array/array.component';
 import { ThreadComponent } from './thread/thread.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { WebWorkersComponent } from './thread/web-workers/web-workers.component';
+import { SubjectThreadComponent } from './thread/subject-thread/subject-thread.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SetComponent,
     MapComponent,
     ArrayComponent,
-    ThreadComponent
+    ThreadComponent,
+    WebWorkersComponent,
+    SubjectThreadComponent
   ],
   imports: [
     BrowserModule,

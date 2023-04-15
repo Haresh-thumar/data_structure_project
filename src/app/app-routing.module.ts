@@ -7,21 +7,18 @@ import { ThreadComponent } from './thread/thread.component';
 
 const routes: Routes = [
   {
-    path: 'set', 
+    path: 'set',
     component: SetComponent,
-  },  
+  },
   {
-    path: 'map', 
+    path: 'map',
     component: MapComponent,
-  }, 
+  },
   {
-    path: 'array', 
+    path: 'array',
     component: ArrayComponent,
-  },  
-  {
-    path: 'thread', 
-    component: ThreadComponent,
-  },  
+  },
+  { path: 'thread', component: ThreadComponent, loadChildren: () => import('./thread/thread.module').then(m => m.ThreadModule) },
 ];
 
 @NgModule({
