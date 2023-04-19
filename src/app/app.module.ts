@@ -14,6 +14,7 @@ import { ThreadComponent } from './thread/thread.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WebWorkersComponent } from './thread/web-workers/web-workers.component';
 import { SubjectThreadComponent } from './thread/subject-thread/subject-thread.component';
+import { UserDataComponent } from './user-data/user-data.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { SubjectThreadComponent } from './thread/subject-thread/subject-thread.c
     ArrayComponent,
     ThreadComponent,
     WebWorkersComponent,
-    SubjectThreadComponent
+    SubjectThreadComponent,
+    UserDataComponent
   ],
   imports: [
     BrowserModule,
