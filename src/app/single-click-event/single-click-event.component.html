@@ -1,0 +1,163 @@
+<section class="example-form">
+    <h2 class="h2-title">Add-Student Form</h2>
+
+    <form [formGroup]="addStudentForm" novalidate>
+        <div class="row">
+            <!--===================== Name =====================-->
+            <div class="col-md-6">
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Enter Name</mat-label>
+                    <input type="text" matInput formControlName="name" #name>
+                    <div>
+                        <mat-hint class="length-text">{{name.value.length}} / 30</mat-hint>
+                    </div>
+                </mat-form-field>
+                <!------ Name-Validation ------>
+                <div class="error-row">
+                    <div *ngIf="f['name'].touched && f['name'].invalid || f['name'].dirty" class="error-msg-text">
+                        <div *ngIf="f['name'].errors && f['name'].errors['required']">Name is required.</div>
+                        <div *ngIf="f['name'].errors && f['name'].errors['maxlength']">30 character Limit.</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--===================== Email =====================-->
+            <div class="col-md-6">
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Enter Email</mat-label>
+                    <input type="email" matInput formControlName="email">
+                </mat-form-field>
+                <!------ Email-Validation ------>
+                <div class="error-row">
+                    <div *ngIf="f['email'].touched && f['email'].invalid || f['email'].dirty" class="error-msg-text">
+                        <div *ngIf="f['email'].errors && f['email'].errors['required']">email is required.</div>
+                        <div *ngIf="f['email'].errors && f['email'].errors['pattern']">enter valid email id.</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--===================== Age =====================-->
+            <div class="col-md-6">
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Enter Age</mat-label>
+                    <input type="number" matInput formControlName="age">
+                </mat-form-field>
+                <!------ Age-Validation ------>
+                <div class="error-row">
+                    <div *ngIf="f['age'].touched && f['age'].invalid || f['age'].dirty" class="error-msg-text">
+                        <div *ngIf="f['age'].errors && f['age'].errors['required']">age is required.</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--===================== Mobile =====================-->
+            <div class="col-md-6">
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Enter Number</mat-label>
+                    <input type="number" matInput formControlName="mobile" #mobile>
+                    <div>
+                        <mat-hint class="length-text">{{mobile.value.length}} / 10</mat-hint>
+                    </div>
+                </mat-form-field>
+                <!------ Mobile-Validation ------>
+                <div class="error-row">
+                    <div *ngIf="f['mobile'].touched && f['mobile'].invalid || f['mobile'].dirty" class="error-msg-text">
+                        <div *ngIf="f['mobile'].errors && f['mobile'].errors['required']">mobile is required.</div>
+                        <div *ngIf="f['mobile'].errors && f['mobile'].errors['pattern']">enter valid mobile no.</div>
+                        <div *ngIf="f['mobile'].errors && f['mobile'].errors['maxlength']">15 character Limit.</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--===================== Aadhar No. =====================-->
+            <div class="col-md-6">
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Enter Aadhar No.</mat-label>
+                    <input type="number" matInput formControlName="aadhar" #aadhar>
+                    <div>
+                        <mat-hint class="length-text">{{aadhar.value.length}} / 12</mat-hint>
+                    </div>
+                </mat-form-field>
+                <!------ Aadhar No.-Validation ------>
+                <div class="error-row">
+                    <div *ngIf="f['aadhar'].touched && f['aadhar'].invalid || f['aadhar'].dirty" class="error-msg-text">
+                        <div *ngIf="f['aadhar'].errors && f['aadhar'].errors['required']">aadharNo is required.</div>
+                        <div *ngIf="f['aadhar'].errors && f['aadhar'].errors['pattern']">enter valid aadharNo no.</div>
+                        <div *ngIf="f['aadhar'].errors && f['aadhar'].errors['maxlength']">12 character Limit.</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--===================== Pancard =====================-->
+            <div class="col-md-6">
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Enter Pancard No.</mat-label>
+                    <input type="text" matInput formControlName="pancard" #pancard>
+                    <div>
+                        <mat-hint class="length-text">{{pancard.value.length}} / 10</mat-hint>
+                    </div>
+                </mat-form-field>
+                <!------ Pancard-Validation ------>
+                <div class="error-row">
+                    <div *ngIf="f['pancard'].touched && f['pancard'].invalid || f['pancard'].dirty"
+                        class="error-msg-text">
+                        <div *ngIf="f['pancard'].errors && f['pancard'].errors['required']">Pancard No. is required.
+                        </div>
+                        <div *ngIf="f['pancard'].errors && f['pancard'].errors['pattern']">enter valid Pancard No.</div>
+                        <div *ngIf="f['pancard'].errors && f['pancard'].errors['maxlength']">15 character Limit.</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--===================== Submit || Update || Cancel Button =====================-->
+            <div class="update-btn">
+                <button mat-raised-button color="primary" class="add-Student-btn" [disabled]="!addStudentForm.valid"
+                    type="submit" (click)="postStudent()">Add Student</button>
+            </div>
+        </div>
+    </form>
+
+
+
+
+
+
+
+
+<!---================================================================= Table ==========================================================================-->
+<h2 style="margin-top: 50px; text-align: center; color: orangered;">User Data</h2>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Age</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">Aadhar</th>
+        <th scope="col">Pancard</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of getUser">
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.age}}</td>
+        <td>{{item.mobile}}</td>
+        <td>{{item.aadhar}}</td>
+        <td>{{item.pancard}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button mat-raised-button color="accent" (click)="getUserData()">Get Data</button>
+
+
+</section>

@@ -14,7 +14,8 @@ import { ThreadComponent } from './thread/thread.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WebWorkersComponent } from './thread/web-workers/web-workers.component';
 import { SubjectThreadComponent } from './thread/subject-thread/subject-thread.component';
-import { UserDataComponent } from './user-data/user-data.component';
+import { HttpClientModule } from '@angular/common/http';
+import { GetImageComponent } from './get-image/get-image.component';
 
 
 @NgModule({
@@ -26,7 +27,7 @@ import { UserDataComponent } from './user-data/user-data.component';
     ThreadComponent,
     WebWorkersComponent,
     SubjectThreadComponent,
-    UserDataComponent
+    GetImageComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +37,8 @@ import { UserDataComponent } from './user-data/user-data.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

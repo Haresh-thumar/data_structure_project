@@ -1,3 +1,58 @@
 {
-  "posts": [ ]
+  "posts": [
+    {
+      "id": 1,
+      "name": "Haresh Thumar",
+      "email": "haresh.t@gurukul.org",
+      "age": 25,
+      "mobile": 9946921131,
+      "aadhar": 297496631946,
+      "pancard": "JBHYU8769U"
+    },
+    {
+      "id": 2,
+      "name": "Krutik hirpara",
+      "email": "krutik.h@gurukul.org",
+      "age": 22,
+      "mobile": 9498944894,
+      "aadhar": 162694965264,
+      "pancard": "JUIHB9426U"
+    },
+    {
+      "id": 3,
+      "name": "Dhaval Chavda",
+      "email": "dhaval.d@gurukul.org",
+      "age": 21,
+      "mobile": 9496161616,
+      "aadhar": 226496641496,
+      "pancard": "UISEU8562B"
+    },
+    {
+      "id": 4,
+      "name": "Ankit Domadiya",
+      "email": "ankit.d@gurukul.org",
+      "age": 23,
+      "mobile": 9946646495,
+      "aadhar": 469699556516,
+      "pancard": "KCNSC4623L"
+    },
+    {
+      "id": 5,
+      "name": "Dhruv Gorasiya",
+      "email": "dhruv.g@gurukul.org",
+      "age": 22,
+      "mobile": 9478964155,
+      "aadhar": 646415162665,
+      "pancard": "ODJUT5236L"
+    },
+    {
+      "id": 6,
+      "name": "Smit Hirpara",
+      "email": "smit.h@gurukul.org",
+      "age": 21,
+      "mobile": 9484666113,
+      "aadhar": 313131646465,
+      "pancard": "PDJUI5873J"
+    }
+  ]
 }

@@ -1,0 +1,15 @@
+<button mat-raised-button color="warn" (click)="getImagesFromApi()">Get Image</button>
+
+
+
+<div class="container-fluid">
+    <div class="row text-center">
+        <div class="col" *ngFor="let data of images">
+            <img src='{{data.url}}' height="70px" width="70px">
+            <p>{{data.id}}</p>
+        </div>
+    </div>
+</div>
+
+
+
