@@ -16,6 +16,7 @@ import { WebWorkersComponent } from './thread/web-workers/web-workers.component'
 import { SubjectThreadComponent } from './thread/subject-thread/subject-thread.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GetImageComponent } from './get-image/get-image.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 
 @NgModule({
@@ -34,11 +35,12 @@ import { GetImageComponent } from './get-image/get-image.component';
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    HttpClientModule
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Subject } from 'rxjs';
+import { UserDataService } from './services/user-data.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'data_structure_project';
+
+  isLoader: Subject<boolean> = this.loader.isLoading;
+
+  constructor(private loader:UserDataService) { }
 }
