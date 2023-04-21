@@ -38,9 +38,11 @@ export class UserDataService {
   isLoading = new Subject<boolean>();
   showLoader() {
     this.isLoading.next(true);
+    document.body.style.pointerEvents = 'none';
   }
   stopLoader() {
     this.isLoading.next(false);
+    document.body.style.pointerEvents = 'auto';
   }
 
   

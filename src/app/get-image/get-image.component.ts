@@ -15,10 +15,9 @@ export class GetImageComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  /*----------- Get-Image from Url with Loader -----------*/
+  /*----------- Get-Image Api call with Loader & Disable Window Pointer Events -----------*/
   images: any;
-  getImagesFromApi(event: any) {
-    event.disabled = true;
+  getImagesFromApi() {
     this.loader.showLoader();
     this.api.getImg().subscribe({
       next: (res: any) => {
@@ -26,23 +25,32 @@ export class GetImageComponent implements OnInit {
       },
       error: (err: ErrorHandler) => {
         console.log(err);
-        event.target.disabled = false;
+        // this.loader.stopLoader();
       },
       complete: () => {
         console.log('Image Get Successfully');
         this.loader.stopLoader();
-        event.target.disabled = false;
       }
     })
   }
 
 
-
-
-
-
-
-
+/*----------- Observable call with Button Disabled -----------*/
+  thirdMethod(event: any) {
+    event.target.disabled = true;
+    setTimeout(() => {
+      from([50, 15, 20, 30, 40])
+        .pipe(
+          map(item => item * 2)
+        )
+        .subscribe(
+          item => console.log(`Resulting item...${item}`),
+          err => console.log(`Error Ocurred ${err}`),
+          () => console.log(`Completed`)
+        )
+      event.target.disabled = false;
+    }, 2000)
+  }
 
 
 }

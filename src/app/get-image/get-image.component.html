@@ -1,5 +1,7 @@
-<button mat-raised-button color="warn" (click)="getImagesFromApi($event)" id="submitButton">Get Image</button>
-
+<!--------------------------------------------------------------------------------------------------------------------
+                            Get-Image Api call with Loader & Disable Window Pointer Events
+--------------------------------------------------------------------------------------------------------------------->
+<button mat-raised-button color="warn" (click)="getImagesFromApi()">Get Image</button>
 <div class="container-fluid">
     <div class="row text-center">
         <div class="col" *ngFor="let data of images">
@@ -9,7 +11,12 @@
     </div>
 </div>
 
-<br><br>
+
 <br><br>
 <br><br>
 
+
+<!--------------------------------------------------------------------------------------------------------------------
+                            Get-Image Api call with Loader & Disable Window Pointer Events
+--------------------------------------------------------------------------------------------------------------------->
+<button (click)="thirdMethod($event)" >Third Click</button>
